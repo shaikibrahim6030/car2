@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: car2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: car2
+  template:
+    metadata:
+      labels:
+        app: car2
+    spec:
+      containers:
+      - name: car2
+        image: l00187756/gracy1
+        ports:
+        - containerPort: 5000
